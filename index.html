@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FF Diamond Generator</title>
+
+<style>
+
+body{
+background:#0a0a0a;
+font-family:Arial;
+text-align:center;
+color:white;
+}
+
+.box{
+width:320px;
+margin:auto;
+margin-top:60px;
+padding:25px;
+border-radius:20px;
+background:#111;
+box-shadow:0 0 25px cyan;
+}
+
+h1{
+color:cyan;
+text-shadow:0 0 15px cyan;
+}
+
+input{
+width:90%;
+padding:12px;
+margin-top:15px;
+border:none;
+border-radius:10px;
+background:#222;
+color:white;
+font-size:16px;
+}
+
+button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:10px;
+background:cyan;
+font-size:18px;
+font-weight:bold;
+}
+
+#hasil{
+margin-top:25px;
+font-size:18px;
+color:lime;
+}
+
+.loading{
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>💎 FREE FIRE 💎</h1>
+
+<h2>Diamond Generator</h2>
+
+<input type="text" id="idff" placeholder="Masukkan ID Free Fire">
+
+<br>
+
+<button onclick="generate()">Generate</button>
+
+<div id="hasil"></div>
+
+</div>
+
+<script>
+
+function generate(){
+
+let id = document.getElementById("idff").value;
+
+if(id==""){
+document.getElementById("hasil").innerHTML =
+"Masukkan ID dulu!";
+}
+else{
+
+document.getElementById("hasil").innerHTML =
+"<div class='loading'>Searching Player...</div>";
+
+setTimeout(function(){
+
+document.getElementById("hasil").innerHTML =
+"✅ Player Found<br><br>💎 Diamond sedang dikirim ke akun anda...<br><br>⏳ Estimasi: 1 Jam";
+
+},3000);
+
+}
+
+}
+
+</script>
+
+</body>
+  </html>
